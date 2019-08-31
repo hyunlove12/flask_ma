@@ -25,12 +25,17 @@ def ui_calc():
         elif op == '/': result = n1 / n2
     return jsonify(result = result)
 
-@app.route('/ai_calc', method=['post'])
+@app.route('/ai_calc', methods=['post'])
 def ai_calc():
     num1 = request.form['num1']
     num2 = request.form['num2']
     opcode = request.form['opcode']
-
+    c = CalculatorController(num1, num2, opcode)
+    result = c.calc()
+    render_params ={}
+    render_params['result'] = int(result)
+    print('app.py에 출력 된 덧셈결과 ; {}'.format(result))
+    return render_template('ai_calc.html', **render_params)
 
 @app.route('/')
 def index():

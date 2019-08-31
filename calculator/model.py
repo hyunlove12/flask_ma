@@ -9,7 +9,7 @@ class CalculatorModel:
         #placeholder - 변수
         #virable -> 텐서플로 내부에서 사용하는 변수
         w1 = tf.placeholder(tf.float32, name='w1')
-        w2 = tf.placeholder(tf.float23, name='w2')
+        w2 = tf.placeholder(tf.float32, name='w2')
         #json과 1대1로 대응
         #int a = 3 과 같이 초기화 작업하는 것
         #op_add라는 모델명으로 w1과w2를 더하여 10.0이 나오는 경우를 모델로 준 것
