@@ -46,7 +46,7 @@ class CalculatorModel:
         w2 = tf.placeholder(tf.float32, name='w2')
         feed_dict = {'w1': 10.0, 'w2': 2.0}
         # 마이너스 -> subtract
-        r = tf.multiply(w1, w2, name='op_min')
+        r = tf.multiply(w1, w2, name='op_mul')
         sess = tf.Session()
         _ = tf.Variable(initial_value='fake_variable')
         sess.run(tf.global_variables_initializer())
@@ -59,7 +59,7 @@ class CalculatorModel:
         w2 = tf.placeholder(tf.float32, name='w2')
         feed_dict = {'w1': 10.0, 'w2': 2.0}
         # 마이너스 -> subtract
-        r = tf.divide(w1, w2, name='op_min')
+        r = tf.divide(w1, w2, name='op_div')
         sess = tf.Session()
         _ = tf.Variable(initial_value='fake_variable')
         sess.run(tf.global_variables_initializer())
