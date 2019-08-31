@@ -27,3 +27,42 @@ class CalculatorModel:
         print('TF 덧셈결과:{}'.format(result))
         #10이 나오는 덧셈 연산을 1000번 해라
         saver.save(sess, './saved_add_model/model', global_step=1000)
+
+    def create_min_model(self):
+        w1 = tf.placeholder(tf.float32, name='w1')
+        w2 = tf.placeholder(tf.float32, name='w2')
+        feed_dict={'w1': 10.0, 'w2':2.0}
+        #마이너스 -> subtract
+        r = tf.subtract(w1, w2, name='op_min')
+        sess = tf.Session()
+        _ = tf.Variable(initial_value='fake_variable')
+        sess.run(tf.global_variables_initializer())
+        saver = tf.train.Saver()
+        result = sess.run(r, {w1 : feed_dict['w1'], w2 : feed_dict['w2']})
+        saver.save(sess, './saved_min_model/model', global_step=1000)
+
+    def create_mul_model(self):
+        w1 = tf.placeholder(tf.float32, name='w1')
+        w2 = tf.placeholder(tf.float32, name='w2')
+        feed_dict = {'w1': 10.0, 'w2': 2.0}
+        # 마이너스 -> subtract
+        r = tf.multiply(w1, w2, name='op_min')
+        sess = tf.Session()
+        _ = tf.Variable(initial_value='fake_variable')
+        sess.run(tf.global_variables_initializer())
+        saver = tf.train.Saver()
+        result = sess.run(r, {w1: feed_dict['w1'], w2: feed_dict['w2']})
+        saver.save(sess, './saved_mul_model/model', global_step=1000)
+
+    def create_div_model(self):
+        w1 = tf.placeholder(tf.float32, name='w1')
+        w2 = tf.placeholder(tf.float32, name='w2')
+        feed_dict = {'w1': 10.0, 'w2': 2.0}
+        # 마이너스 -> subtract
+        r = tf.divide(w1, w2, name='op_min')
+        sess = tf.Session()
+        _ = tf.Variable(initial_value='fake_variable')
+        sess.run(tf.global_variables_initializer())
+        saver = tf.train.Saver()
+        result = sess.run(r, {w1: feed_dict['w1'], w2: feed_dict['w2']})
+        saver.save(sess, './saved_div_model/model', global_step=1000)

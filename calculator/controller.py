@@ -10,20 +10,26 @@ class CalculatorController:
         n1 = self._num1
         n2 = self._num2
         opcode = self._opcode
-
+        _meta = ''
+        _checkPoint = ''
         print('app.py에서 받은 n1 = {}. n2 = {}, opcode = {}'.format(n1, n2, opcode))
-
+        if(opcode == 'add'):
+            _meta = 'calculator/saved_add_model/model-1000.meta'
+            _checkPoint = 'calculator/saved_add_model'
+        elif(opcode == 'min'):
+            _meta = 'calculator/saved_min_model/model-1000.meta'
+            _checkPoint = 'calculator/saved_min_model'
         tf.reset_default_graph()
         #세션에 있는 모델 호출
         with tf.Session() as sess:
             sess.run(tf.global_variables_initializer())
             #상대겨로가 인식 안된다
             #절대경로로 표시
-            saver = tf.train.import_meta_graph('calculator/saved_add_model/model-1000.meta')
+            saver = tf.train.import_meta_graph(_meta)
             #checkpoint가 훈련에 대한 로그
             #가장 마지막로그를 가져오는 것
 
-            saver.restore(sess, tf.train.latest_checkpoint('calculator/saved_add_model'))
+            saver.restore(sess, tf.train.latest_checkpoint(_checkPoint))
 
             graph = tf.get_default_graph()
             w1 = graph.get_tensor_by_name('w1:0')
