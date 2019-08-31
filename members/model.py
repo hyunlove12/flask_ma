@@ -9,7 +9,7 @@ class MemberModel:
                     USERID VARCHAR(10) PRIMARY KEY,
                     PASSWORD VARCHAR(20),
                     PHONE VARCHAR(15),
-                    REGDATE DATE DEFAULT CURRENT TIMESTAMP
+                    REGDATE DATE DEFAULT CURRENT_TIMESTAMP
                 );
                 """
         self.conn.execute(query)
@@ -22,9 +22,9 @@ class MemberModel:
                 , ('park', '1', '010-4444-5555')
                 ]
         stmt = """
-                INSERT INTO MEMBER(USERID, PASSWORD, REGDATE) VALUES(?, ?, ?)
+                INSERT INTO MEMBER(USERID, PASSWORD, PHONE) VALUES(?, ?, ?)
                 """
-        self.conn.execute(stmt, data)
+        self.conn.executemany(stmt, data)
         self.conn.commit()
 
     def fetch_one(self):
@@ -51,3 +51,10 @@ class MemberModel:
         row = cursor.fetchone()
         print('로그인 회원정보 : {}'.format(row))
         return row
+
+    def delete(self):
+        query = """
+                DELETE FROM MEMBER
+                """
+        self.conn.execute(query)
+        self.conn.commit()

@@ -2,6 +2,7 @@ from flask import Flask
 from flask import render_template, request, jsonify
 from calculator.controller import CalculatorController
 from cabbage.controller import CabbageController
+from members.controller import MemberController
 import re
 app = Flask(__name__)
 
@@ -41,6 +42,16 @@ def ai_calc():
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/login', methods=['post'])
+def login():
+    userid = request.form['userid']
+    password = request.form['password']
+    ctrl = MemberController()
+#    ctrl.create_table()
+    view = ctrl.login(userid, password)
+    return render_template(view)
+
 
 #주소부분을 변수처리
 @app.route('/move/<path>')

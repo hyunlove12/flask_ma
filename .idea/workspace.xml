@@ -2,29 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="809e01c2-88c0-4c73-b84d-4ec72228e597" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/members/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculator/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/calculator/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculator/controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/calculator/controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculator/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/calculator/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculator/saved_add_model/checkpoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculator/saved_add_model/model-1000.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculator/saved_add_model/model-1000.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculator/saved_add_model/model-1000.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculator/saved_div_model/checkpoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculator/saved_div_model/model-1000.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculator/saved_div_model/model-1000.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculator/saved_div_model/model-1000.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculator/saved_min_model/checkpoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculator/saved_min_model/model-1000.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculator/saved_min_model/model-1000.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculator/saved_min_model/model-1000.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculator/saved_mul_model/checkpoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculator/saved_mul_model/model-1000.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculator/saved_mul_model/model-1000.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculator/saved_mul_model/model-1000.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ai_calc.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ai_calc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/members/controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/members/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -46,9 +29,11 @@
   <component name="ProjectId" id="1QAd1npO1TsIGS0FpJ3luunTFfK" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/members" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
